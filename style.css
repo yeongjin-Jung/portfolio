@@ -38,7 +38,7 @@
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  cursor: pointer;
+  cursor: default;
 }
 
 a {
@@ -48,6 +48,13 @@ a {
 ul {
   list-style: none;
   padding-left: 0;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 /* Typography 패딩  */
@@ -85,7 +92,7 @@ p {
 #navbar {
   display: flex;
   justify-content: space-between;
-  background-color: pink;
+  background-color: var(--color-pink);
   align-items: center;
   padding: 16px;
 }
@@ -107,11 +114,13 @@ p {
   display: inline-block;
   line-height: 50px;
   padding-left: 15px;
+  color: var(--color-white);
 }
 .navber__menu__item {
   padding: 8px 12px;
   margin: 0 4px;
   border-radius: var(--size-border-radius);
+  cursor: pointer;
 }
 
 .navber__menu__item.active {
@@ -120,4 +129,37 @@ p {
 
 .navber__menu__item:hover {
   background-color: var(--color-dark-pink);
+}
+
+/* Home */
+
+#home {
+  background-image: url("images/homebackground.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding: 30px;
+  text-align: center;
+}
+.home__avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid var(--color-white);
+}
+
+.home__title,
+.home__description {
+  color: var(--color-white);
+}
+
+.home__contact {
+  color: var(--color-white);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-semi-bold);
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid white;
+  border-radius: var(--size-border-radius);
 }
