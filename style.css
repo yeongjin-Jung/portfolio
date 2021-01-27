@@ -184,7 +184,6 @@ p {
   padding: 8px 12px;
   border: 2px solid white;
   border-radius: var(--size-border-radius);
-  tr
 }
 
 /* Section common */
@@ -448,6 +447,26 @@ p {
 }
 .contact__links__img:hover {
   transform: scale(1.05);
+}
+
+/* Scroll */
+.arrow-up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  color: var(--color-white);
+  background-color: pink;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all var(--anmation-duration) ease-in;
+  pointer-events: none;
+}
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* For below 768px screen width */

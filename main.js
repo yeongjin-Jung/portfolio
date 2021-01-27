@@ -32,10 +32,25 @@ contactBtn.addEventListener("click", () => {
 });
 
 // Make home slowly fade to transparent as the window scrolls down
-const home = document.querySelector(".home__container");
-const homeHeight = home.getBoundingClientRect().height;
+const homeContainer = document.querySelector(".home__container");
+const homeContainerHeight = homeContainer.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
-  home.style.opacity = 1 - window.scrollY / homeHeight;
+  homeContainer.style.opacity = 1 - window.scrollY / homeContainerHeight;
+});
+
+// Show "arrow up" button when scrolling down
+const arrowUp = document.querySelector(".arrow-up");
+document.addEventListener("scroll", () => {
+  if (window.scrollY > homeContainerHeight / 2) {
+    arrowUp.classList.add("visible");
+  } else {
+    arrowUp.classList.remove("visible");
+  }
+});
+
+// Handle click on the "arrow up" button
+arrowUp.addEventListener("click", () => {
+  scrollIntoView("#home");
 });
 
 function scrollIntoView(selector) {
