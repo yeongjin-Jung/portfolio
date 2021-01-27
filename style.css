@@ -134,14 +134,14 @@ p {
   color: var(--color-white);
   border-radius: var(--size-border-radius);
   cursor: pointer;
-}
-
-.navber__menu__item.active {
-  border: 1px solid var(--color-white);
+  border: 1px solid transparent;
+  border-radius: var(--size-border-radius);
 }
 
 .navber__menu__item:hover {
   background-color: var(--color-dark-pink);
+  border: 1px solid white;
+  border-radius: var(--size-border-radius);
 }
 
 .navbar__toggle-btn {
@@ -328,13 +328,13 @@ p {
   padding: 8px 48px 8px 70px;
 }
 
-.category__btn.active,
+.category__btn.selected,
 .category__btn:hover {
   background-color: var(--color-pink);
   color: var(--color-white);
 }
 
-.category__btn.active .category__cnt,
+.category__btn.selected .category__cnt,
 .category__btn:hover .category__cnt {
   opacity: 1;
   top: 0;
