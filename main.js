@@ -22,7 +22,14 @@ navbarMenu.addEventListener("click", (event) => {
   }
   console.log(event.target.dataset.link);
 
+  navbarMenu.classList.remove("open");
   scrollIntoView(link);
+});
+
+// Navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+navbarToggleBtn.addEventListener("click", () => {
+  navbarMenu.classList.toggle("open");
 });
 
 // Contact button click
