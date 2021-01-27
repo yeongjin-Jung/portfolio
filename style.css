@@ -128,17 +128,19 @@ p {
   padding-left: 15px;
   color: var(--color-white);
 }
-.navber__menu__item {
+.navbar__menu__item {
   padding: 8px 12px;
   margin: 0 4px;
   color: var(--color-white);
   border-radius: var(--size-border-radius);
   cursor: pointer;
   border: 1px solid transparent;
-  border-radius: var(--size-border-radius);
+}
+.navbar__menu__item.active {
+  border: 1px solid var(--color-white);
 }
 
-.navber__menu__item:hover {
+.navbar__menu__item:hover {
   background-color: var(--color-dark-pink);
   border: 1px solid white;
   border-radius: var(--size-border-radius);
