@@ -282,11 +282,11 @@ p {
 
 /* Skill */
 
-#skiils {
-  background-color: var(--color-yellow);
+#skills {
+  background-color: lightgoldenrodyellow !important;
 }
 
-.skiilset {
+.skillset {
   display: flex;
   background-color: var(--color-light-grey);
   color: var(--color-white);
