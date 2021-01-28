@@ -14,6 +14,8 @@
   --color-blue: #73aace;
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
+  --color-blue: #5ea7fa;
+  --color-deep-blue: #0026ff;
 
   /* Font size */
   --font-large: 48px;
@@ -102,11 +104,11 @@ p {
   align-items: center;
   padding: 16px;
   transition: all var(--anmation-duration) ease-in-out;
-  z-index: 1;
+  z-index: 2;
 }
 
 #navbar.navbar--dark {
-  background-color: var(--color-dark-pink);
+  background-color: var(--color-blue);
 }
 
 .navbar__menu {
@@ -141,7 +143,7 @@ p {
 }
 
 .navbar__menu__item:hover {
-  background-color: var(--color-dark-pink);
+  background-color: var(--color-deep-blue);
   border: 1px solid white;
   border-radius: var(--size-border-radius);
 }
@@ -158,13 +160,27 @@ p {
 /* Home */
 
 #home {
-  background-image: url("images/homebackground.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   padding: 30px;
   padding-top: 120px;
   text-align: center;
+  position: relative;
+  z-index: 1;
+}
+#home::after {
+  background-image: url("images/homebackground.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-size: 100%;
+  opacity: 0.8 !important;
+  filter: alpha(opacity=50);
+  z-index: -1;
+  content: "";
+  width: 100%;
+  height: 100%;
 }
 .home__avatar {
   width: 250px;
@@ -337,7 +353,7 @@ p {
 
 .category__btn.selected,
 .category__btn:hover {
-  background-color: var(--color-pink);
+  background-color: var(--color-blue);
   color: var(--color-white);
 }
 
@@ -433,7 +449,7 @@ p {
 /* Contact */
 
 #contact {
-  background-color: var(--color-pink);
+  background-color: var(--color-blue);
 }
 
 .contact__title,
@@ -475,7 +491,7 @@ p {
   height: 70px;
   font-size: 50px;
   color: var(--color-white);
-  background-color: pink;
+  background-color: var(--color-deep-blue);
   border-radius: 50%;
   opacity: 0;
   transition: all var(--anmation-duration) ease-in;
